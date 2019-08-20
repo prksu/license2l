@@ -3,6 +3,7 @@ package cmd
 import (
 	"github.com/spf13/cobra"
 
+	"github.com/prksu/license2l/pkg/cmd/completion"
 	"github.com/prksu/license2l/pkg/cmd/initialize"
 )
 
@@ -14,5 +15,6 @@ func NewLicense2lCommand() *cobra.Command {
 	}
 
 	cmd.AddCommand(initialize.NewInitializeCommand())
+	cmd.AddCommand(completion.NewCompletionCommand())
 	return cmd
 }
